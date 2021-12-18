@@ -38,7 +38,7 @@ public class SwiftDocumentScannerFlutterPlugin: NSObject, FlutterPlugin {
         let scannerViewController: ImageScannerController = ImageScannerController()
         scannerViewController.imageScannerDelegate = self
         scannerViewController.modalPresentationStyle = .fullScreen
-        scannerViewController.navigationBar.backgroundColor = .white
+        scannerViewController.navigationBar.backgroundColor = UIColor.white
         
         rootViewController?.present(scannerViewController, animated:true, completion:nil)
     }
@@ -84,7 +84,7 @@ extension SwiftDocumentScannerFlutterPlugin: UIImagePickerControllerDelegate, UI
         let scannerViewController: ImageScannerController = ImageScannerController(image: image)
         scannerViewController.imageScannerDelegate = self
         scannerViewController.modalPresentationStyle = .fullScreen
-        scannerViewController.navigationBar.backgroundColor = .white
+        scannerViewController.navigationBar.backgroundColor = UIColor.white
         rootViewController?.present(scannerViewController, animated:true, completion:nil)
     }
 }
