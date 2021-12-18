@@ -81,6 +81,8 @@ extension SwiftDocumentScannerFlutterPlugin: UIImagePickerControllerDelegate, UI
     private func pikedCamera(image: UIImage? = nil){
         let scannerViewController: ImageScannerController = ImageScannerController(image: image)
         scannerViewController.imageScannerDelegate = self
+        scannerViewController.modalPresentationStyle = .fullScreen
+        scannerViewController.navigationBar.backgroundColor = .white
         rootViewController?.present(scannerViewController, animated:true, completion:nil)
     }
 }
