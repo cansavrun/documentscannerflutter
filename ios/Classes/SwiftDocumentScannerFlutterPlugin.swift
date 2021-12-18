@@ -37,6 +37,8 @@ public class SwiftDocumentScannerFlutterPlugin: NSObject, FlutterPlugin {
     private func camera(){
         let scannerViewController: ImageScannerController = ImageScannerController()
         scannerViewController.imageScannerDelegate = self
+        scannerViewController.modalPresentationStyle = .fullScreen
+        scannerViewController.navigationBar.backgroundColor = .white
         
         rootViewController?.present(scannerViewController, animated:true, completion:nil)
     }
