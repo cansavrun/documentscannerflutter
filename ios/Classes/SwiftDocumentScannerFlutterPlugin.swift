@@ -51,6 +51,10 @@ public class SwiftDocumentScannerFlutterPlugin: NSObject, FlutterPlugin {
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.modalPresentationStyle = .fullScreen
+        
+        if #available(iOS 13.0, *) {
+            imagePicker.overrideUserInterfaceStyle = .dark
+        }
 
         rootViewController?.present(imagePicker, animated: true)
     }
